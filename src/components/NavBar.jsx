@@ -58,9 +58,9 @@ const NavBar = () => {
             style={{ width: "17px", height: "17px", marginRight: "10px" }}
           />
         </div>
-        <div className="opacity-80 mt-6 ml-6">
+        {/* <div className="opacity-80 mt-6 ml-6">
           <CustomButton color="yellow" text="SIGN-UP" />
-        </div>
+        </div> */}
       </div>
     </div>
   );
