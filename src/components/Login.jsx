@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import NavBar from "./NavBar";
 import CustomButton from "./CustomButton";
 import { useNavigate } from "react-router-dom";
-import { useUser } from "./UserName";
 import HomePage from "./HomePage";
 
 const Login = () => {
-  const { setUserName } = useUser();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
@@ -16,11 +14,10 @@ const Login = () => {
     if (storedUserData) {
       const userData = JSON.parse(storedUserData);
       if (userData.name === name && userData.email === email) {
-        setUserName(name);
+        // setLogin(true);
         setName("");
         setEmail("");
         navigate("/homePage");
-        console.log(setUserName);
       }
     }
   };

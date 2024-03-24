@@ -1,10 +1,11 @@
 import React, { createContext, useState, useContext } from "react";
 import NavBar from "./NavBar";
 import CustomButton from "./CustomButton";
-import { useUser } from "./UserName";
+
 
 const Header = () => {
-  const { name } = useUser();
+  const [name, setName] = useState("");
+  const [login, setLogin] = useState(false);
   return (
     <div>
       <NavBar />
@@ -28,7 +29,7 @@ const Header = () => {
               paddingRight: "90px",
             }}
           >
-            WELCOME! <span className="userName">{name}</span>.
+            WELCOME! <span className="userName"></span>
           </h1>
           <div
             style={{
